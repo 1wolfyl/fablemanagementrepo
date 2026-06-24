@@ -354,7 +354,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &330532937
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -683,7 +683,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 'Fan Promblem
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -807,6 +809,7 @@ GameObject:
   - component: {fileID: 603437211}
   - component: {fileID: 603437210}
   - component: {fileID: 603437209}
+  - component: {fileID: 603437212}
   m_Layer: 0
   m_Name: 'CS choice '
   m_TagString: Untagged
@@ -877,7 +880,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 603437210}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 603437212}
+        m_TargetAssemblyTypeName: Choices, Assembly-CSharp
+        m_MethodName: OnChoiceSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &603437210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -916,6 +931,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 603437207}
   m_CullTransparentMesh: 1
+--- !u!114 &603437212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603437207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b807e71981bb06409d7f69f4846ff41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resource: {fileID: 88526634}
+  safetyText: {fileID: 1704931952}
+  customerText: {fileID: 1838997582}
+  dialogueScript: {fileID: 1394525691}
 --- !u!1 &663012120
 GameObject:
   m_ObjectHideFlags: 0
@@ -928,6 +959,7 @@ GameObject:
   - component: {fileID: 663012124}
   - component: {fileID: 663012123}
   - component: {fileID: 663012122}
+  - component: {fileID: 663012125}
   m_Layer: 0
   m_Name: Safety choice
   m_TagString: Untagged
@@ -998,7 +1030,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 663012123}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 663012125}
+        m_TargetAssemblyTypeName: Choices, Assembly-CSharp
+        m_MethodName: OnChoiceSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &663012123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1037,6 +1081,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 663012120}
   m_CullTransparentMesh: 1
+--- !u!114 &663012125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663012120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b807e71981bb06409d7f69f4846ff41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resource: {fileID: 88526634}
+  safetyText: {fileID: 1704931952}
+  customerText: {fileID: 1838997582}
+  dialogueScript: {fileID: 1394525691}
 --- !u!1 &814920766
 GameObject:
   m_ObjectHideFlags: 0
@@ -1417,6 +1477,93 @@ Transform:
   m_Children:
   - {fileID: 1309312715}
   - {fileID: 88526633}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1157036420
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1157036422}
+  - component: {fileID: 1157036421}
+  m_Layer: 0
+  m_Name: Square
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1157036421
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157036420}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Color: {r: 0.28444046, g: 0.122152, b: 0.4245283, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1157036422
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157036420}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 17.58675, y: 10.102313, z: 10.74}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1183030222
@@ -1882,9 +2029,10 @@ GameObject:
   - component: {fileID: 1394525687}
   - component: {fileID: 1394525689}
   - component: {fileID: 1394525688}
-  - component: {fileID: 1394525690}
+  - component: {fileID: 1394525691}
+  - component: {fileID: 1394525692}
   m_Layer: 0
-  m_Name: DialogueBox
+  m_Name: dialogueBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1949,7 +2097,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1394525686}
   m_CullTransparentMesh: 1
---- !u!114 &1394525690
+--- !u!114 &1394525691
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1961,9 +2109,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 869d742ddf865d94e8dcd15592a10383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textComponent: {fileID: 0}
-  lines: []
-  textSpeed: 0
+  textComponent: {fileID: 814920768}
+  nodes:
+  - nodeName: Slime Problem
+    lines:
+    - A Slime fan has left a trail of goo all over
+    - Now other fans are slipping and falling as they go to their seats
+    - How should we fix this without upseting the slime
+    hasChoices: 1
+    nextNode: 1
+  - nodeName: VIP harry harpy
+    lines:
+    - Harry Harpy requirs witch's brew in order to watch the game
+    - Turns out the concession stands are all out
+    - Who should we send to help our VIP
+    hasChoices: 1
+    nextNode: 2
+  - nodeName: Solution
+    lines:
+    - Game day is over
+    hasChoices: 0
+    nextNode: 0
+  textSpeed: 0.03
+  dialogueBox: {fileID: 1394525686}
+  choicesPanel: {fileID: 870625415}
+--- !u!114 &1394525692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394525686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b5af4160611ec84f873061bbbc2ffe9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1470831088
 GameObject:
   m_ObjectHideFlags: 0
@@ -2849,3 +3030,4 @@ SceneRoots:
   - {fileID: 1367266636}
   - {fileID: 1854346247}
   - {fileID: 330532938}
+  - {fileID: 1157036422}
